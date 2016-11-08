@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" packages="com.mcreations.log4j">
+	<Appenders>
+		<NativeSyslog name="myapp" id="myapp0" facility="local0"
+			ignoreExceptions="false" newLine="true" newLineEscape="\\n" charset="UTF-8">
+			<PatternLayout
+				pattern="serial no: %sn |  Date: %d |  level:%level | class name:%logger | method name:%M() |  line number:%L |  Location: %l | message:%m%n" />
+		</NativeSyslog>
+	</Appenders>
+	<Loggers>
+		<Root level="info" additivity="false">
+			<AppenderRef ref="myapp" />
+		</Root>
+	</Loggers>
+</Configuration>
+
+<!-- Local Variables: -->
+<!-- mode:nxml -->
+<!-- nxml-child-indent:2 -->
+<!-- tab-width:2 -->
+<!-- indent-tabs-mode:t -->
+<!-- End: -->

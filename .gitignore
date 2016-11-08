@@ -1,0 +1,28 @@
+*~
+*.swp
+*.class
+bin/
+target/
+target-ide/
+logs/
+.settings/
+.project
+.classpath
+.idea
+*.iml
+
+# log files
+/core
+hs_err_pid*.log
+
+# build results
+/target
+
+pom.xml.tag
+pom.xml.next
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+
+
+**/bower_components
+**/node_modules
