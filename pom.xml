@@ -6,7 +6,7 @@
 	<artifactId>log4j2-native-syslog</artifactId>
 
 	<packaging>jar</packaging>
-	<version>0.9.0</version>
+	<version>0.9.1-SNAPSHOT</version>
 
 	<name>log4j2-native-syslog</name>
 
@@ -66,9 +66,9 @@
 	</issueManagement>
 	<scm>
 		<url>https://github.com/m-creations/log4j2-native-syslog</url>
-		<connection>scm:git:git://github.com/m-creations/log4j2-native-syslog.git</connection>
-		<developerConnection>scm:git:git@github.com:darabi/log4j2-native-syslog.git</developerConnection>
-		<tag>log4j2-native-syslog-0.9.0</tag>
+		<connection>scm:git:git://git@github.com:m-creations/log4j2-native-syslog.git</connection>
+		<developerConnection>scm:git:git://git@github.com:m-creations/log4j2-native-syslog.git</developerConnection>
+		<tag>HEAD</tag>
 	</scm>
 
 	<build>
@@ -81,7 +81,6 @@
 				<configuration>
 					<serverId>ossrh</serverId>
 					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-					<stagingProfileId>com.m-creations</stagingProfileId>
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
