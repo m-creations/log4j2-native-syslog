@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.m-creations</groupId>
@@ -7,7 +6,7 @@
 	<artifactId>log4j2-native-syslog</artifactId>
 
 	<packaging>jar</packaging>
-	<version>0.9.0-SNAPSHOT</version>
+	<version>0.9.0</version>
 
 	<name>log4j2-native-syslog</name>
 
@@ -69,7 +68,7 @@
 		<url>https://github.com/m-creations/log4j2-native-syslog</url>
 		<connection>scm:git:git://github.com/m-creations/log4j2-native-syslog.git</connection>
 		<developerConnection>scm:git:git@github.com:darabi/log4j2-native-syslog.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>log4j2-native-syslog-0.9.0</tag>
 	</scm>
 
 	<build>
@@ -82,7 +81,7 @@
 				<configuration>
 					<serverId>ossrh</serverId>
 					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-					<stagingProfileId>de.commonlisp</stagingProfileId>
+					<stagingProfileId>com.m-creations</stagingProfileId>
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
