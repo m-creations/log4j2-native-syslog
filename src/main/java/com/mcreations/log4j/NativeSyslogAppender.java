@@ -36,11 +36,9 @@ import org.apache.logging.log4j.spi.LoggerContext;
  * <li>in rsyslog.conf: $MaxMessageSize 1M
  * <li>in /etc/rsyslog.d/99-myapplication.conf: local0.*
  * /var/log/myapplication.log
- * <li>touch /var/log/myapplication.log && chmod syslog:adm
+ * <li>touch /var/log/myapplication.log &amp;&amp; chmod syslog:adm
  * /var/log/myapplication.log
- * 
- * <pre>
- * </pre>
+ * </ul>
  */
 @Plugin(name = "NativeSyslog", category = "Core", elementType = Appender.ELEMENT_TYPE, printObject = true)
 public class NativeSyslogAppender extends AbstractAppender {
@@ -123,54 +121,20 @@ public class NativeSyslogAppender extends AbstractAppender {
 	 *            the caller.
 	 * @param facility
 	 *            The Facility is used to try to classify the message.
-	 * @param includeMdc
-	 *            Indicates whether data from the ThreadContextMap will be
-	 *            included in the RFC 5424 Syslog record. Defaults to "true:.
-	 * @param mdcId
-	 *            The id to use for the MDC Structured Data Element.
-	 * @param mdcPrefix
-	 *            The prefix to add to MDC key names.
-	 * @param eventPrefix
-	 *            The prefix to add to event key names.
+	 * @param id the ID of the Appender
 	 * @param newLine
 	 *            If true, a newline will be appended to the end of the syslog
 	 *            record. The default is false.
 	 * @param escapeNL
 	 *            String that should be used to replace newlines within the
 	 *            message text.
-	 * @param appName
-	 *            The value to use as the APP-NAME in the RFC 5424 syslog
-	 *            record.
-	 * @param msgId
-	 *            The default value to be used in the MSGID field of RFC 5424
-	 *            syslog records.
-	 * @param excludes
-	 *            A comma separated list of mdc keys that should be excluded
-	 *            from the LogEvent.
-	 * @param includes
-	 *            A comma separated list of mdc keys that should be included in
-	 *            the FlumeEvent.
-	 * @param required
-	 *            A comma separated list of mdc keys that must be present in the
-	 *            MDC.
-	 * @param format
-	 *            If set to "RFC5424" the data will be formatted in accordance
-	 *            with RFC 5424. Otherwise, it will be formatted as a BSD Syslog
-	 *            record.
+	 * @param layout the {@link Layout} of this Appender
 	 * @param filter
 	 *            A Filter to determine if the event should be handled by this
 	 *            Appender.
-	 * @param config
-	 *            The Configuration.
 	 * @param charsetName
 	 *            The character set to use when converting the syslog String to
 	 *            a byte array.
-	 * @param exceptionPattern
-	 *            The converter pattern to use for formatting exceptions.
-	 * @param loggerFields
-	 *            The logger fields
-	 * @param advertise
-	 *            Whether to advertise
 	 * @return A SyslogAppender.
 	 */
 	@PluginFactory

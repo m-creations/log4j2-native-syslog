@@ -23,21 +23,21 @@ public interface Clib extends Library {
 	public static final int LOG_PERROR = 0x20;
 
 	// Priorities -------------------------------------------
-	/** #define	LOG_EMERG	0	// system is unusable */
+	/** #define LOG_EMERG 0 // system is unusable */
 	public static final int LOG_EMERG = 0;
-	/** #define	LOG_ALERT	1	// action must be taken immediately */
+	/** #define LOG_ALERT 1 // action must be taken immediately */
 	public static final int LOG_ALERT = 1;
-	/** #define	LOG_CRIT	2	// critical conditions */
+	/** #define LOG_CRIT 2 // critical conditions */
 	public static final int LOG_CRIT = 2;
-	/** #define	LOG_ERR		3	// error conditions */
+	/** #define LOG_ERR 3 // error conditions */
 	public static final int LOG_ERR = 3;
-	/** #define	LOG_WARNING	4	// warning conditions */
+	/** #define LOG_WARNING 4 // warning conditions */
 	public static final int LOG_WARNING = 4;
-	/** #define	LOG_NOTICE	5	// normal but significant condition */
+	/** #define LOG_NOTICE 5 // normal but significant condition */
 	public static final int LOG_NOTICE = 5;
-	/** #define	LOG_INFO	6	// informational */
+	/** #define LOG_INFO 6 // informational */
 	public static final int LOG_INFO = 6;
-	/** #define	LOG_DEBUG	7	// debug-level messages */
+	/** #define LOG_DEBUG 7 // debug-level messages */
 	public static final int LOG_DEBUG = 7;
 
 	void printf(String format, Object... args);
@@ -47,12 +47,18 @@ public interface Clib extends Library {
 	void syslog(int priority, String format, Object... args);
 
 	/**
-	 * The args argument is not used, in this case: <tt>arg</tt> contains
-	 * all the text.
+	 * Overloaded version of {@link #syslog(int, String, Object...)} where
+	 * <tt>buf</tt> is a {@link ByteBuffer}.
 	 * 
 	 * @param priority
+	 *            one of the priorities {@link #LOG_EMERG}, {@link #LOG_ALERT},
+	 *            {@link #LOG_CRIT}, {@link #LOG_ERR}, {@link #LOG_WARNING},
+	 *            {@link #LOG_NOTICE}, {@link #LOG_INFO}, {@link #LOG_DEBUG}
 	 * @param buf
+	 *            the {@link ByteBuffer} which contains the format string of the
+	 *            message
 	 * @param args
+	 *            possible arguments to the format string, possibly empty
 	 */
 	void syslog(int priority, ByteBuffer buf, Object... args);
 
