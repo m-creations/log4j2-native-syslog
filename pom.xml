@@ -66,8 +66,8 @@
 	</issueManagement>
 	<scm>
 		<url>https://github.com/m-creations/log4j2-native-syslog</url>
-		<connection>scm:git:git://git@github.com:m-creations/log4j2-native-syslog.git</connection>
-		<developerConnection>scm:git:git://git@github.com:m-creations/log4j2-native-syslog.git</developerConnection>
+		<connection>scm:git:git@github.com:m-creations/log4j2-native-syslog.git</connection>
+		<developerConnection>scm:git:git@github.com:m-creations/log4j2-native-syslog.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
